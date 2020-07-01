@@ -56,7 +56,7 @@ class Net(network.resnet38d.Net):
         f = f.view(n,-1,h*w)
         f = f/(torch.norm(f,dim=1,keepdim=True)+1e-5)
 
-        aff = F.relu(torch.matmul(f.transpose(1,2), f),inplace=True)
+        aff = F.relu(torch.matmul(f.transpose(1,2), f))#,inplace=True)
         aff = aff/(torch.sum(aff,dim=1,keepdim=True)+1e-5)
         cam_rv = torch.matmul(cam, aff).view(n,-1,h,w)
         
