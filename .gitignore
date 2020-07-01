@@ -1,0 +1,7 @@
+# dataset and models
+VOC2012/
+SEAM_model/
+VOCdevkit/
+
+# cache
+*.pyc

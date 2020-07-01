@@ -40,9 +40,9 @@ if __name__ == '__main__':
     parser.add_argument("--wt_dec", default=5e-4, type=float)
     parser.add_argument("--train_list", default="voc12/train_aug.txt", type=str)
     parser.add_argument("--val_list", default="voc12/val.txt", type=str)
-    parser.add_argument("--session_name", default="resnet38_SEAM", type=str)
+    parser.add_argument("--session_name", default="test", type=str) #resnet38_SEAM
     parser.add_argument("--crop_size", default=448, type=int)
-    parser.add_argument("--weights", required=True, type=str)
+    parser.add_argument("--weights", default='./SEAM_model/resnet38_SEAM.pth', type=str)  #,required=True,
     parser.add_argument("--voc12_root", default='VOC2012', type=str)
     parser.add_argument("--tblog_dir", default='./tblog', type=str)
     args = parser.parse_args()
